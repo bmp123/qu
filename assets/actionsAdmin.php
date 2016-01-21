@@ -16,7 +16,6 @@ class actionsAdmin extends db
     return $i;
   }
 
-
   static function getNumRowsCategory ($id)
   {
     $table = "services";

@@ -61,14 +61,6 @@ class Values extends View
         return $flag;
     }
 
-    public function destroySession ()
-    {
-        session_start();
-        session_destroy();
-        $reload = '<script language="JavaScript">window.location.href = "http://www.u.ru/admin/"</script>';
-        return $reload;
-    }
-
     public function getFun () 
     {   
         $url = $_GET['url'];

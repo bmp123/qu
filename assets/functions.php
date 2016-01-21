@@ -26,6 +26,14 @@ class View extends db
 		return $view;
 	}
 
+	public function destroySession ()
+    {
+        session_start();
+        session_destroy();
+        $reload = '<script language="JavaScript">window.location.href = "http://www.u.ru/admin/"</script>';
+        return $reload;
+    }
+
 	public function viewServices ()
 	{
 		$table = "services";

@@ -14,10 +14,11 @@
 	</header>
 	<div id="search">
 		<div id="search-panel">
+			<b>Попробуйте найти нужную вам услугу воспользовавщись поиском</b>
 			<form method="get">
 				<input type="hidden" name="url" value="viewSearch">
-				<input type="text" name="s_category" class="search-inp" id="search-category" value="category">
-				<input type="text" name="s_city" class="search-inp" id="search-city" value="city">
+				<input type="text" name="s_category" class="search-inp" id="search-category" placeholder="Категория">
+				<input type="text" name="s_city" class="search-inp" id="search-city" placeholder="Город">
 				<button id="btn-search">Найти</button>
 			<form>
 		</div>
