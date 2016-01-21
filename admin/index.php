@@ -2,7 +2,7 @@
 <?php session_start()?>
 <?php require_once("../assets/values.php"); ?>
 
-<? if(Values::session()){ echo "Пожалуйста,подождите..."; echo '<script language="JavaScript">window.location.href = "http://www.u.ru/admin/panel.php"</script>'; }else{?>
+<? if(Values::session()){ echo "Пожалуйста,подождите..."; echo '<script language="JavaScript">window.location.href = "http://www.q.ru/admin/panel.php"</script>'; }else{?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -29,7 +29,7 @@ $('#btn_sub').click(function(){
     	success : function(data) {
     		console.log(data);
     		if (data==1) {            
-    			window.location.href = "http://www.u.ru/admin/panel.php";
+    			window.location.href = "http://www.q.ru/admin/panel.php";
     		}else if(data==2){
     			$("#error").text("Неверный Логин/Пароль");
     		}

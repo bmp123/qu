@@ -15,7 +15,7 @@
 	</header>
 	<div id="menu">
 		<ul>
-			<li><a href="">Главная</a></li>
+			<li><a href="panel.php">Главная</a></li>
 			<li><a href="?url=addServices">Добавить услугу</a></li>
 			<li><a href="?url=myData">Личные данные</a></li>
 			<li><a href="?url=viewOrders">Заявки</a></li>
@@ -29,5 +29,5 @@
 	</footer>
 </body>
 </html>
-<?}else{echo '<script language="JavaScript">window.location.href = "http://www.u.ru/admin/"</script>';}?>
+<?}else{echo '<script language="JavaScript">window.location.href = "http://www.q.ru/admin/"</script>';}?>
 <script type="text/javascript" src="../js/post.js"></script>

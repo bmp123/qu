@@ -185,24 +185,42 @@ class View extends db
     return $view;
     }
 
+    public function getOrders()
+    {
+    	$table = "orders";
+    	$id = $_SESSION['id'];
+    	$sql = "SELECT * FROM ".$table." WHERE adm_id = '".$id."'";
+    	$result = self::getSql($sql);
+
+      	return $result;
+    }
+
     public function viewOrders () 
     {   
       	$result = self::getOrders();
       	$row = mysqli_fetch_assoc($result);
 
       	$view .='<div id="form-my-data">';
-    	$view .='<p>'.$result['o_name'].'</p>';
-    	$view .='<p>'.$result['o_number'].'</p>';
-    	$view .='<p>'.$result['o_service'].'</p>';
-    	$view .='<p>'.$result['o_comment'].'</p>';
+    	$view .='<p>'.$row['o_name'].'</p>';
+    	$view .='<p>'.$row['o_number'].'</p>';
+    	$view .='<p>'.$row['o_service'].'</p>';
+    	$view .='<p>'.$row['o_comment'].'</p>';
     	$view .='<div id="error"></div></div>';
 
       	return $view;
     }
 
+    public function destroySession ()
+    {
+        session_start();
+        session_destroy();
+        $reload = '<script language="JavaScript">window.location.href = "http://www.q.ru/admin/"</script>';
+        return $reload;
+    }
+
     public function home ()
     {
-        $view = '<script language="JavaScript">window.location.href = "http://www.u.ru"</script>';
+        $view = '<script language="JavaScript">window.location.href = "http://www.q.ru"</script>';
         return $view;
     }
 }
